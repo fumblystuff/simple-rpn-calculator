@@ -2,3 +2,4 @@
 
 A simple RPN calculator
 
+![Wireframe](images/wireframe.png)
