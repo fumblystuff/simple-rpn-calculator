@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:simple_rpn_calc/pages/home.dart';
+
+import './pages/home.dart';
 
 const appName = 'Simple RPN Calculator';
 
