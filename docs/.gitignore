@@ -1,0 +1,13 @@
+# Folders
+.cache/
+_site/
+node_modules/
+joomla/articles/
+px-faction-html/
+
+# Files
+.DS_Store
+netlify-secrets.txt
+
+# Local Netlify folder
+.netlify

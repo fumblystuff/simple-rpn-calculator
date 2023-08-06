@@ -53,39 +53,31 @@ class _AboutPage extends State<AboutPage> {
         ),
         body: SafeArea(
             child: ListView(padding: const EdgeInsets.all(16.0), children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
-            children: <Widget>[
-              Container(
-                padding: EdgeInsets.all(5),
-                margin: EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(
-                    width: 2,
-                  ),
-                ),
-                child: Image.asset("assets/images/app-icon-128.png"),
-              )
-            ],
-          ),
-          Text("This is the remote garage door opener application for the "
-              "Fumbly Stuff Garage Controller device. The app lets you "
-              "remotely push the garage door button on a garage door connected "
-              "to the Garage Controller device."),
-          SizedBox(height: 10),
-          Text("With this application, you'll define profiles for each of "
-              "the Garage Controller devices through the app's Settings page. "
-              "Once that's done, the app's home page will display a list of "
-              "the configured controllers. Select one of the listed "
-              "controllers, and a page opens allowing you to push the remote "
-              "button or create a single-use URL you can send to another "
-              "person so they'll be able to remotely open the garage door"),
-          SizedBox(height: 20),
-          Text("Application Information",
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   mainAxisSize: MainAxisSize.max,
+          //   children: <Widget>[
+          //     Container(
+          //       padding: EdgeInsets.all(5),
+          //       margin: EdgeInsets.all(5),
+          //       decoration: BoxDecoration(
+          //         color: Colors.white,
+          //         border: Border.all(
+          //           width: 2,
+          //         ),
+          //       ),
+          //       child: Image.asset("assets/images/app-icon-128.png"),
+          //     )
+          //   ],
+          // ),
+          const Text("This is a free and advertisement free Simple Reverse "
+              "Polish Notation (RPN) calculator."),
+          const SizedBox(height: 10),
+          const Text("By John M. Wargo"),
+          const SizedBox(height: 20),
+          const Text("Application Information",
               style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold)),
-          Divider(thickness: 3),
+          const Divider(thickness: 3),
           appInfoStr('Application name', _packageInfo.appName),
           appInfoStr('Package name', _packageInfo.packageName),
           appInfoStr('Application version', _packageInfo.version),
