@@ -49,7 +49,7 @@ class _AboutPage extends State<AboutPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('About'),
+          title: const Text('About'),
         ),
         body: SafeArea(
             child: ListView(padding: const EdgeInsets.all(16.0), children: [

@@ -3,10 +3,10 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:intl/intl.dart';
 import 'package:logging/logging.dart';
 
+import './constants.dart';
 import './pages/home.dart';
 
-const appName = 'Simple RPN Calculator';
-final log = Logger(appName);
+// final log = Logger(appName);
 
 void main() {
   // Global settings for the logging package
@@ -20,6 +20,7 @@ void main() {
     print(
         '$formattedDate ${record.loggerName} (${record.level.name})$spaces ${record.message}');
   });
+  log.info('Application initialized');
 
   runApp(const MyApp());
 }
@@ -33,12 +34,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: appName,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
-      // theme: ThemeData(
-      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
-      //   useMaterial3: true,
-      // ),
+      // theme: ThemeData.light(),
+      // darkTheme: ThemeData.dark(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
+        useMaterial3: true,
+      ),
       home: const HomePage(title: appName),
       builder: EasyLoading.init(),
     );

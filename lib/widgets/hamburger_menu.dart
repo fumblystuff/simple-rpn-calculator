@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:logging/logging.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../constants.dart';
 import '../pages/about_page.dart';
-import '../pages/settings_page.dart';
 
-const docUrl = 'https://garagecontroller.com';
-
-final log = Logger('GarageController');
+// final log = Logger(appName);
 
 class HamburgerMenu extends StatelessWidget {
   const HamburgerMenu({Key? key}) : super(key: key);
@@ -46,7 +43,7 @@ class HamburgerMenu extends StatelessWidget {
                     left: 16.0,
                     child: Text("Garage Controller",
                         style: TextStyle(
-                            color: Colors.black,
+                            // color: Colors.black,
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold))),
               ])),
@@ -57,7 +54,7 @@ class HamburgerMenu extends StatelessWidget {
               size: 24.0,
               semanticLabel: 'About icon',
             ),
-            title: Text('About'),
+            title: const Text('About'),
             onTap: () {
               log.info('Opening About page');
               Navigator.pop(context);
@@ -67,23 +64,23 @@ class HamburgerMenu extends StatelessWidget {
               );
             },
           ),
-          ListTile(
-            leading: Icon(
-              Icons.settings,
-              color: Colors.blue.shade400,
-              size: 24.0,
-              semanticLabel: 'Settings icon',
-            ),
-            title: Text('Settings'),
-            onTap: () {
-              log.info('Opening Settings page');
-              Navigator.pop(context);
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SettingsPage()),
-              ).then((value) => {print("returned")});
-            },
-          ),
+          // ListTile(
+          //   leading: Icon(
+          //     Icons.settings,
+          //     color: Colors.blue.shade400,
+          //     size: 24.0,
+          //     semanticLabel: 'Settings icon',
+          //   ),
+          //   title: const Text('Settings'),
+          //   onTap: () {
+          //     log.info('Opening Settings page');
+          //     Navigator.pop(context);
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(builder: (context) => SettingsPage()),
+          //     ).then((value) => {print("returned")});
+          //   },
+          // ),
           ListTile(
             leading: Icon(
               Icons.help_outline,
@@ -91,7 +88,7 @@ class HamburgerMenu extends StatelessWidget {
               size: 24.0,
               semanticLabel: 'Help icon',
             ),
-            title: Text('Documentation'),
+            title: const Text('Documentation'),
             onTap: () {
               Navigator.pop(context);
               _launchDocsUrl();

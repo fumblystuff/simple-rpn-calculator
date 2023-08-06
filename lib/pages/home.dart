@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:logging/logging.dart';
 
 import '../widgets/hamburger_menu.dart';
 
-final log = Logger('Simple RPN Calculator');
+// final log = Logger(appName);
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
